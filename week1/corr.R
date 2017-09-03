@@ -8,7 +8,7 @@ corr<-function(directory,threshold=0){
   #initialize the return vector
   cr <- c()
   if(llen>0){
-  #for each eligible ids
+  #for each eligible ids. Remember the "1:" , else indexing will not happen properly
   for(i in 1:llen){
     f<-sprintf("%03d.csv", ids_above_threshold[i])
     #load the file
